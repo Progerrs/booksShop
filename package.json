@@ -65,6 +65,7 @@
     "node": "14.X"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/compose-function": "0.0.30",
     "@types/faker": "^5.5.5",
     "@types/react-router": "^5.1.13",

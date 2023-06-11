@@ -64,7 +64,7 @@ const actions = [
     },
 ];
 
-type ActionId = typeof actions[number]["id"];
+type ActionId = (typeof actions)[number]["id"];
 
 const LocationAlert = () => (
     <Alert
