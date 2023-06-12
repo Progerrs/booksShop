@@ -28,7 +28,6 @@ const createUser = (userId: number): User => {
 
 export const SIMPLE_USER: User = createUser(0);
 
-
 export const JANE_DOE: User = {
     id: 3,
     email: "jane.doe@gmail.com",

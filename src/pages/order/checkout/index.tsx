@@ -42,7 +42,6 @@ const useCheckoutValidation = () => {
     return { isEnoughMoney, message, isDeliveryAssigned, isEmptyCart, isTotallyAllowed };
 };
 
-
 const CheckoutPage = () => {
     dom.useTitle("Оформление аренды | Sharead");
 
