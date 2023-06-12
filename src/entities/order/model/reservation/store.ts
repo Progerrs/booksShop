@@ -1,10 +1,9 @@
 import { viewerLib } from "entities/viewer";
 import { browser } from "shared/lib";
-// FIXME: temp! @hardcoded
+
 import { fakeApi } from "shared/api";
 import * as events from "./events";
 
-// FIXME: fetch later by API
 export const initialState: number[] = viewerLib
     .getUserNormalized(fakeApi.users.users.getViewer())
     .reserved.map((r) => r.aBookId);

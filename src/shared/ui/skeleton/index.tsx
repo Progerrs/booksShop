@@ -7,10 +7,6 @@ type Props = {
     height?: number;
 };
 
-/**
- * @UIKit Плейсхолдер-скелетон для карточки
- * @loading
- */
 const SkeletonView = ({ className, height = 145 }: Props) => {
     return (
         <Skeleton.Input

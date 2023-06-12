@@ -10,15 +10,7 @@ const CatalogPage = lazy(() => import("./catalog"));
 const BookPage = lazy(() => import("./book"));
 const OrderPages = lazy(() => import("./order"));
 
-// Страница без хедера
-const NoHeaderPage = lazy(() => import("./debug/no-header"));
-
-// TODO: Сделать работу с хедером на уровне pages
 export const headerIgnoreRoutes = ["/debug/no-header"];
-
-// TODO: Add auth zone restricting
-// TODO: Add query-params provider
-// TODO: decompose into app/hocs? (withRouter)
 
 const Routing = () => {
     useResetScrollAtEveryPage();
@@ -31,7 +23,6 @@ const Routing = () => {
             <Route exact path="/catalog" component={CatalogPage} />
             <Route path="/order" component={OrderPages} />
             <Route exact path="/book/:bookId" component={BookPage} />
-            <Route exact path="/debug/no-header" component={NoHeaderPage} />
             <Redirect to="/" />
         </Switch>
     );

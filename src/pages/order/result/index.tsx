@@ -1,24 +1,14 @@
 import { Layout, Button, Result } from "antd";
 import { HashLink as Link } from "react-router-hash-link";
 
-// import { orderModel } from "entities/order";
 import { Header } from "widgets/header";
 import { Footer } from "widgets/footer";
 import { Cart } from "features/cart";
 import { dom } from "shared/lib";
 import styles from "./styles.module.scss";
 
-// !!! FIXME: split by features!
-// TODO: Add skeletons loader
-
-/**
- * @page Страница результата оформления заказа
- */
 const ResultPage = () => {
-    // const { isEmptyCart } = orderModel.cart.useOrderValidation();
-    // FIXME: Сделать позже через промиз
     dom.useTitle("Аренда успешно оформлена! | Sharead");
-    // hooks.useRedirectOn(isEmptyCart, "/order");
 
     return (
         <Layout className={styles.root}>

@@ -15,7 +15,6 @@ import styles from "./styles.module.scss";
  * @page Страница текущей корзины заказа
  */
 const CartPage = () => {
-    // FIXME: Сделать позже через промиз
     dom.useTitle("Аренда книг | Sharead");
 
     return (

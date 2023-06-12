@@ -21,7 +21,6 @@ const AddFundsForm = ({ className }: Props) => {
         <div className={cn(styles.root, className)}>
             <Typography.Title level={4}>Пополнение кошелька</Typography.Title>
             <Form.Item
-                // FIXME: simplify!
                 validateStatus={isValid ? "success" : "error"}
                 help="Минимальный платеж составляет 100 рублей"
             >
@@ -40,7 +39,6 @@ const AddFundsForm = ({ className }: Props) => {
             <Button
                 type="primary"
                 block
-                // href="#redirect-to-payment-service"
                 onClick={() => {
                     // eslint-disable-next-line no-console
                     console.debug("[DEBUG] reachGoal: APPLY_TRANSACTION");

@@ -1,25 +1,25 @@
 import dayjs from "dayjs";
-import type { CoffeeShop } from "../../types";
+import type { Shop } from "../../types";
 
-export const COFFEBEAN: CoffeeShop = {
+export const COFFEBEAN: Shop = {
     id: 1,
-    name: "Coffee Bean",
-    address: "ул. Университетская, д.8",
-    deliveryAt: dayjs().add(4, "days").toISOString(),
+    name: "Пятерочка",
+    address: "ул. Фязов, д.14",
+    deliveryAt: dayjs().add(14, "days").toISOString(),
 };
 
-export const COFFESHOP_COMPANY: CoffeeShop = {
+export const COFFESHOP_COMPANY: Shop = {
     id: 2,
-    name: "Coffeeshop Company (Венская кофейня)",
-    address: "ул. Баумана, д.38/17",
-    deliveryAt: dayjs().add(7, "days").toISOString(),
+    name: "Ozon",
+    address: "Jason Moyo Avenue, 263, Хараре",
+    deliveryAt: dayjs().add(31, "days").toISOString(),
 };
 
-export const SKURATOV: CoffeeShop = {
+export const SKURATOV: Shop = {
     id: 3,
-    name: "Skuratov",
-    address: "ул. Пушкина, д.5/43",
-    deliveryAt: dayjs().add(1, "days").toISOString(),
+    name: "Wildberis",
+    address: "ул. Пушкина, д.колотушкина",
+    deliveryAt: dayjs().add(2, "days").toISOString(),
 };
 
 export const getAll = () => [COFFEBEAN, COFFESHOP_COMPANY, SKURATOV];

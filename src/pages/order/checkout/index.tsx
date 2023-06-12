@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import { YMaps, Map } from "react-yandex-maps";
 import { useState } from "react";
 import dayjs from "dayjs";
-// !!! FIXME: temp!;
+
 import moment from "moment";
 
 import { Header } from "widgets/header";
@@ -26,9 +26,6 @@ import { viewerModel } from "entities/viewer";
 import { fakeApi } from "shared/api";
 import { dom } from "shared/lib";
 import styles from "./styles.module.scss";
-
-// !!! FIXME: split by features!
-// TODO: Add skeletons loader
 
 const useCheckoutValidation = () => {
     const { price } = orderModel.cart.useOrder();
@@ -45,11 +42,8 @@ const useCheckoutValidation = () => {
     return { isEnoughMoney, message, isDeliveryAssigned, isEmptyCart, isTotallyAllowed };
 };
 
-/**
- * @page Страница оформления заказа
- */
+
 const CheckoutPage = () => {
-    // FIXME: Сделать позже через промиз
     dom.useTitle("Оформление аренды | Sharead");
 
     return (
@@ -141,7 +135,7 @@ const DeliveryForm = () => {
                     checked={mode === "COFFESHOP"}
                     style={{ marginBottom: 20 }}
                 >
-                    Получить на ближайшем митапе в кофейне
+                    Получить в ближаешей точке выдичи
                 </Checkbox>
                 {mode === "MANUAL" && (
                     <>
@@ -168,7 +162,7 @@ const DeliveryForm = () => {
                         <Select
                             options={shopsOptions}
                             style={{ width: "100%" }}
-                            placeholder="Выберите кофейню..."
+                            placeholder="Выберите точку доставки..."
                             onSelect={(value) => {
                                 const shop = shopsQuery.find((cs) => String(cs.id) === value);
                                 if (!shop) return;
@@ -184,7 +178,7 @@ const DeliveryForm = () => {
             <Col span={12} className={styles.deliveryMap}>
                 <YMaps>
                     <Map
-                        defaultState={{ center: [55.79, 49.12], zoom: 14 }}
+                        defaultState={{ center: [57.641563, 39.850747], zoom: 18 }}
                         width="100%"
                         height="100%"
                         options={{ autoFitToViewport: "always" }}
@@ -199,8 +193,6 @@ const Sidebar = () => {
     const viewer = viewerModel.useViewerWallet();
     const order = orderModel.cart.useOrder();
     const validation = useCheckoutValidation();
-    // const history = useHistory();
-    // hooks.useRedirectOn(isEmptyCart, "/order");
 
     return (
         <Layout.Sider className={styles.sidebar} width={400}>

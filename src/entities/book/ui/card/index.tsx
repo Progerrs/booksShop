@@ -43,7 +43,6 @@ const imgStyle: Record<Size, CSSProperties> = {
     },
 };
 
-// FIXME:
 // eslint-disable-next-line max-lines-per-function
 const BookCard = (props: Props) => {
     // prettier-ignore
@@ -54,7 +53,6 @@ const BookCard = (props: Props) => {
     const description = `${publisher} (${b.publicationYear})`;
 
     const isDefault = size === "default";
-    // const isSmall = size === "small";
     const isMini = size === "mini";
 
     const withDescription = props.withDescription || isDefault;
@@ -63,7 +61,6 @@ const BookCard = (props: Props) => {
         <Card
             key={b.id}
             hoverable
-            // headStyle={{ background: "grey" }}
             bodyStyle={bodyStyle[size]}
             cover={<BookFilled style={imgStyle[size]} />}
             className={cn(
@@ -74,7 +71,6 @@ const BookCard = (props: Props) => {
             )}
             actions={isMini || !actions?.length ? undefined : actions}
         >
-            {/* FIXME: Поправить разметку */}
             <Card.Meta
                 className={styles.meta}
                 title={
@@ -99,9 +95,5 @@ const BookCard = (props: Props) => {
         </Card>
     );
 };
-
-// const getActions = (title: string) => [
-//     <HeartOutlined key="fav" onClick={() => alert.success("Добавлено в избранное", title)} />,
-// ];
 
 export default BookCard;

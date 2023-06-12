@@ -1,10 +1,5 @@
 import { notification } from "antd";
 
-/**
- * NOTE: Вынес в отдельный модуль для:
- * - упрощения API (более нормализированное и привычное)
- * - для стандартизации единого placement для всех алертов
- */
 const generateOpener =
     (type: import("antd/lib/notification").IconType) =>
     (

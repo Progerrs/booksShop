@@ -11,7 +11,6 @@ import styles from "./styles.module.scss";
 export const Aside = () => {
     const viewer = viewerModel.useViewer();
 
-    /* FIXME: move to entitites */
     return (
         <Layout.Sider className={styles.rootContiner} width={400}>
             <div className={styles.root}>

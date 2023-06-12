@@ -53,7 +53,6 @@ const spanActions = 5;
 
 const MAX_SPAN = 24;
 
-// FIXME:
 // eslint-disable-next-line max-lines-per-function
 const BookRow = (props: Props) => {
     const { data, className, size = "default", titleAsLink = true, actions, asSecondary } = props;
@@ -84,19 +83,6 @@ const BookRow = (props: Props) => {
         </Row>
     );
 };
-
-// const Actions = ({ title }: { title: string }) => (
-//     <>
-//         <Button
-//             type="default"
-//             icon={<HeartOutlined />}
-//             onClick={() => alert.success("Добавлено в избранное", title)}
-//             block
-//         >
-//             В избранное
-//         </Button>
-//     </>
-// );
 
 export const BookRowCard = (props: Props) => (
     <Card hoverable className={styles.rootCard}>

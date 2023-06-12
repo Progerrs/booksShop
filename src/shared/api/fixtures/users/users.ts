@@ -22,43 +22,12 @@ const createUser = (userId: number): User => {
         favABooks: [],
         roles: [roles.USER],
         statusBan: false,
-        registeredAt: "2021-04-15T00:00:00.354Z",
+        registeredAt: "2023-04-15T00:00:00.354Z",
     };
 };
 
 export const SIMPLE_USER: User = createUser(0);
 
-export const JOHN_DOE: User = {
-    id: 1,
-    email: "john.doe@gmail.com",
-    emailVerified: true,
-    firstName: "John",
-    lastName: "Doe",
-    books: USERS_UBOOKS[1],
-    closedOrders: [],
-    openedOrders: [],
-    reservations: [],
-    favABooks: [],
-    roles: [roles.USER],
-    statusBan: false,
-    registeredAt: "2021-05-20T00:00:00.354Z",
-};
-
-export const JULY_DOE: User = {
-    id: 2,
-    email: "july.doe@gmail.com",
-    emailVerified: true,
-    firstName: "July",
-    lastName: "Doe",
-    books: USERS_UBOOKS[2],
-    closedOrders: [],
-    openedOrders: [],
-    reservations: [],
-    favABooks: [],
-    roles: [roles.USER],
-    statusBan: false,
-    registeredAt: "2021-05-16T00:00:00.354Z",
-};
 
 export const JANE_DOE: User = {
     id: 3,
@@ -73,29 +42,25 @@ export const JANE_DOE: User = {
     favABooks: [],
     roles: [roles.USER],
     statusBan: false,
-    registeredAt: "2021-05-12T00:00:00.354Z",
+    registeredAt: "2023-05-12T00:00:00.354Z",
 };
 
 const __VIEWER: User = {
     id: 4,
-    email: "jack.doe@gmail.com",
+    email: "exseple@gmail.com",
     emailVerified: false,
-    firstName: "Jack",
-    lastName: "Doe",
+    firstName: "Вася",
+    lastName: "Пупкин",
     books: USERS_UBOOKS[4],
-    // FIXME: hardcoded
     closedOrders: [4],
-    // FIXME: hardcoded
     openedOrders: [1, 2, 3],
-    // FIXME: hardcoded
     reservations: [2, 7],
-    // FIXME: hardcoded
     favABooks: [25],
     roles: [roles.USER],
     statusBan: false,
     registeredAt: "2021-05-02T00:00:00.354Z",
     wallet: {
-        moneyCount: 300,
+        moneyCount: 700,
     },
 };
 
@@ -110,8 +75,6 @@ export const OWNER_11 = createUser(11);
 
 const LIST = [
     SIMPLE_USER,
-    JOHN_DOE,
-    JULY_DOE,
     JANE_DOE,
     __VIEWER,
     OWNER_5,
@@ -131,7 +94,6 @@ export const getById = (userId: number) => {
     return getAll().find((u) => u.id === userId);
 };
 
-// FIXME Для синхронизации
 export const getViewer = () => {
     return getById(__VIEWER.id)!;
 };

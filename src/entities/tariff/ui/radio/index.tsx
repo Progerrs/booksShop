@@ -12,7 +12,6 @@ type Props = {
 const TariffRadio = (props: Props) => {
     const { onChange, value = DEFAULT, disabled, __byDuration } = props;
 
-    // !!! FIXME: Жесткий костыль!!!
     const getTValue = (t: number) => {
         if (!__byDuration) return t;
         return t <= __byDuration ? value : -1;

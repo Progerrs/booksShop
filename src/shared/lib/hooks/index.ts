@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 
 import { useHistory } from "react-router-dom";
 
-// Привет yet-another свалка хелперов
-
 export const useVisibility = (initialVisible = false) => {
     const [visible, setVisible] = useState(initialVisible);
     return {

@@ -49,7 +49,6 @@ export const useBookStatus = (bookId: number) => {
     return { isBookInCart };
 };
 
-// FIXME: useStoreMap instead
 export const useOrder = () => {
     const books = useOrderBooks();
     const durations = useOrderDurations();
@@ -57,7 +56,6 @@ export const useOrder = () => {
     const price = books
         .map((b) => {
             const price = fakeApi.library.books.getPrice(b);
-            // FIXME: @hardcoded (возвращается почему-то undefined, надо разобраться)
             const duration = durations[b.id] || DEFAULT_DURATION;
             const coeff = duration / DEFAULT_DURATION;
             return Math.floor(price * coeff);
@@ -73,10 +71,6 @@ export const useOrderValidation = () => {
 
     return { isEmptyCart };
 };
-
-// export const useCartStore = () => {
-//     return useStore($cart);
-// };
 
 export const useDeliveryStore = () => {
     return useStore($delivery);

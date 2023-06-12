@@ -7,14 +7,7 @@ import { Content } from "./content";
 import { Sidebar } from "./sidebar";
 import styles from "./styles.module.scss";
 
-// !!! FIXME: split by features!
-// TODO: Add skeletons loader
-
-/**
- * @page Страница профиля
- */
 const ProfilePage = () => {
-    // FIXME: Сделать позже через промиз
     dom.useTitle("Личный кабинет | Sharead");
 
     return (

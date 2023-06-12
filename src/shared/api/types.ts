@@ -110,7 +110,7 @@ export type Category = {
     cover: any;
 };
 
-export type CoffeeShop = {
+export type Shop = {
     id: number;
     name: string;
     address: string;

@@ -10,9 +10,7 @@ type Props = {
 };
 
 const useToggleBook = (bookId: number) => {
-    // FIXME: replace to reservationModel
     const { isBookReserved } = orderModel.reservation.useBookReservationStatus(bookId);
-    // const isBookReserved = Boolean((book?.name.length || 0) % 2);
     const book = bookModel.useBook(bookId);
 
     const handleToggle = () => {

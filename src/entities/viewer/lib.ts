@@ -35,7 +35,6 @@ export const getMyBookInfo = (book: Book) => {
     return { status };
 };
 
-// Страх и ужас, не показывайте такое детям
 export const getUserNormalized = (user: User) => {
     const opened: Order[] = fakeApi.checkout.orders.getByIds(user.openedOrders);
 
@@ -70,8 +69,7 @@ export const getUserNormalized = (user: User) => {
 export const getUserStat = (user: User) => {
     const un = getUserNormalized(user);
 
-    // Если учитывать, что цена на книгу уменьшается в среднем в 4 раза по сравнению с оригиналом
-    const saved = un.closedPrices.reduce((a, b) => a + b, 0) * (4 - 1);
+    const saved = un.closedPrices.reduce((a, b) => a + b, 0) * (7 - 1);
 
     return {
         saved: `~ ${saved} ₽`,

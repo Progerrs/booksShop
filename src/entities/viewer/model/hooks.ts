@@ -36,7 +36,6 @@ export const useViewerNormalized = () => {
 const WALLET_MONEY = 300;
 
 export const useViewerWallet = () => {
-    // const wallet = useViewer().wallet;
     const [wallet, setWallet] = browser.useLocalStorage("fakeWallet", WALLET_MONEY);
     const [paymentPending, setPaymentPending] = useState(false);
 

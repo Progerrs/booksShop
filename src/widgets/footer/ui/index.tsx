@@ -3,9 +3,9 @@ import styles from "./styles.module.scss";
 
 const Footer = () => (
     <Layout.Footer className={styles.root}>
-        Sharead ©2021 Created by{" "}
-        <a href="https://github.com/select-name/sharead-frontend" target="_blank" rel="noreferrer">
-            SelectName team
+        Разаботал сайти{" "}
+        <a href="https://vk.com/id97490900" target="_blank" rel="noreferrer">
+            Зябликов.С.С
         </a>
     </Layout.Footer>
 );
