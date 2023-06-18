@@ -517,7 +517,6 @@ type GetListParams = {
         };
         tariff?: number;
         existsOnly?: boolean;
-        // !!! FIXME: Ужаснейший код! Никогда не показывайте это бекендерам!
         getRentInfoBy?: (book: AbstractBook) => {
             duration: number;
             status: "OUT_STOCK" | "RENTABLE" | "RESERVABLE" | "OWN";
