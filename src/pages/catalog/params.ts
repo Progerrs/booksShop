@@ -64,7 +64,7 @@ export const VIEW_TYPE = {
     list: "list" as const,
 };
 
-type ViewTypeValue = (typeof VIEW_TYPE)[keyof typeof VIEW_TYPE];
+type ViewTypeValue = typeof VIEW_TYPE[keyof typeof VIEW_TYPE];
 
 export const defaultViewType = VIEW_TYPE.list;
 
