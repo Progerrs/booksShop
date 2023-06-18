@@ -15,7 +15,6 @@ const createUser = (userId: number): User => {
         firstName,
         lastName,
         books: USERS_UBOOKS[userId],
-        // closedOrders: Array(faker.datatype.number(6))
         closedOrders: [],
         openedOrders: [],
         reservations: [],

@@ -35,7 +35,7 @@ const BookPage = (props: Props) => {
     const book = fakeApi.library.books.getById(bookId);
 
     // FIXME: Сделать позже через промиз
-    dom.useTitle(`${book ? book.name : "Книга не найдена"} | Sharead`);
+    dom.useTitle(`${book ? book.name : "Книга не найдена"} | MarketRead`);
 
     // !!! TODO: add error page later (or even hoc)
     if (!book) {

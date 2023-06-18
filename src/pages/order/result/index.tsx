@@ -8,7 +8,7 @@ import { dom } from "shared/lib";
 import styles from "./styles.module.scss";
 
 const ResultPage = () => {
-    dom.useTitle("Аренда успешно оформлена! | Sharead");
+    dom.useTitle("Аренда успешно оформлена! | MarketRead");
 
     return (
         <Layout className={styles.root}>

@@ -8,7 +8,7 @@ import { Sidebar } from "./sidebar";
 import styles from "./styles.module.scss";
 
 const ProfilePage = () => {
-    dom.useTitle("Личный кабинет | Sharead");
+    dom.useTitle("Личный кабинет | MarketRead");
 
     return (
         <Layout className={styles.root}>

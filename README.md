@@ -15,7 +15,7 @@ Sharead book service client (demo-only!)
 
 - **UI**: `react`, `antd`, `classnames`, `tailwindcss`
 - **Data model**: `effector`
-- **Lang**: `typescript`
+- **Lang**: `typescript`~~~~
 - **Data fetching**: `miragejs`, `faker`
 - **Routing**: `react-router`
 - **Lint**: `eslint`, `prettier`, `stylelint`

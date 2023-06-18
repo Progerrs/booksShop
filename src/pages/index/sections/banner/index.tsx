@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { Carousel, Typography } from "antd";
-import dayjs from "dayjs";
-import imgBanner1 from "./assets/b1.jpg";
+import imgBanner1 from "./assets/b4.jpg";
 import imgBanner2 from "./assets/b2.jpg";
 import imgBanner3 from "./assets/b3.jpg";
 
@@ -18,10 +17,10 @@ const Banner = () => (
     >
         <div className={styles.bannerItem}>
             <Typography.Text className={styles.bannerItemText}>
-                <h3 style={{ color: "#fff" }}>Книжный митап #4</h3>
-                <p>Coffeeshop Company (Венская кофейня)</p>
-                <p>ул. Баумана, д.38/17, {dayjs().add(7, "days").format("DD.MM.YYYY")}</p>
-                <i>Там вы можете получить последние заказанные книги!</i>
+                <h3 style={{ color: "#fff" }}>Наш склад</h3>
+                <p>MarketReads Store</p>
+                <p>ул. пушкин, д. колотушкина</p>
+                <i>Там мы храним наши книги!</i>
             </Typography.Text>
             <img src={imgBanner1} alt="img-banner-1" width="100%" />
         </div>

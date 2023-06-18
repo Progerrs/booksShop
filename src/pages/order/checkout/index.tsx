@@ -43,7 +43,7 @@ const useCheckoutValidation = () => {
 };
 
 const CheckoutPage = () => {
-    dom.useTitle("Оформление аренды | Sharead");
+    dom.useTitle("Оформление аренды | MarketRead");
 
     return (
         <Layout className={styles.root}>

@@ -15,7 +15,7 @@ import styles from "./styles.module.scss";
  * @page Страница текущей корзины заказа
  */
 const CartPage = () => {
-    dom.useTitle("Аренда книг | Sharead");
+    dom.useTitle("Аренда книг | MarketRead");
 
     return (
         <Layout className={styles.root}>
@@ -45,6 +45,10 @@ const Content = () => {
                 </Typography.Title>
                 <Typography.Text className={styles.contentSectionDescription} type="secondary">
                     Проверьте выбранные книги перед оформлением
+                    <br />
+                    Все цены указаны за аренду книги на 14 дней
+                    <br/>
+                    Итоговая цена отображается в окне справа
                 </Typography.Text>
                 <Row gutter={[0, 20]}>
                     {order.books.map((book) => (
@@ -103,7 +107,6 @@ const RecommendationsSection = () => {
                                 data={b}
                                 size="small"
                                 className={styles.recommendsFeedItem}
-                                // TODO: Добавить проверку на rent и вернуть?
                                 actions={[
                                     <Fav.Actions.AddBookMini key="fav" bookId={b.id} />,
                                     <Cart.Actions.AddBookMini key="order" bookId={b.id} />,

@@ -64,7 +64,7 @@ const actions = [
     },
 ];
 
-type ActionId = typeof actions[number]["id"];
+type ActionId = (typeof actions)[number]["id"];
 
 const LocationAlert = () => (
     <Alert
@@ -74,8 +74,6 @@ const LocationAlert = () => (
         closeText="Закрыть"
     />
 );
-
-// const NOT_AVAILABLE = "Пока что данный функционал не доступен";
 
 // eslint-disable-next-line max-lines-per-function
 const Header = (props: Props) => {
@@ -100,13 +98,11 @@ const Header = (props: Props) => {
                     className={styles.logo}
                     to="/"
                     onClick={() => {
-                        // eslint-disable-next-line no-console
-                        console.debug("[DEBUG] reachGoal: BACK_HOME");
                         ym("reachGoal", "BACK_HOME", { from: pathname });
                     }}
                 >
                     <Logo width={24} />
-                    <h1 className={styles.logoTitle}>sharead</h1>
+                    <h1 className={styles.logoTitle}>MarketRead</h1>
                 </HashLink>
                 <div className={styles.search}>
                     <Search />

@@ -15,7 +15,7 @@ import Sidebar from "./sidebar";
  */
 // eslint-disable-next-line max-lines-per-function
 const CatalogPage = () => {
-    dom.useTitle("Каталог книг — Sharead");
+    dom.useTitle("Каталог книг — MarketRead");
 
     return (
         <Layout>

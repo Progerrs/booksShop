@@ -12,7 +12,7 @@ import { Sections } from "./sections";
  */
 // eslint-disable-next-line max-lines-per-function
 const IndexPage = () => {
-    useTitle("Sharead - Букшеринг сервис");
+    useTitle("MarketRead - Букшеринг сервис");
     return (
         <Layout>
             <Header />

@@ -20,7 +20,7 @@ const mapToOptions = (books: AbstractBook[]) =>
     }));
 
 const TOOLTIP = {
-    MIN_LENGTH: "Уточните запрос (минимум 3 символа)",
+    MIN_LENGTH: "Уточните запрос (минимум 4 символа)",
     NOT_FOUND: "Ничего не найдено - попробуйте расширенный поиск",
 };
 
@@ -37,7 +37,7 @@ const useSearch = () => {
     const isCatalogPage = location.pathname === CATALOG_ROUTE;
 
     const hanldeAutocomplete = (search: string) => {
-        const isNotEnoughLength = search.length < 3;
+        const isNotEnoughLength = search.length < 4;
         setTooltip(isNotEnoughLength ? TOOLTIP.MIN_LENGTH : TOOLTIP.NOT_FOUND);
         // FIXME: hardcoded
         if (isNotEnoughLength) return setQuery(initialQuery);

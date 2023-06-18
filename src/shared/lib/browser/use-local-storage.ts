@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const PREFIX = "SHAREAD";
+const PREFIX = "MarketRead";
 
 // Hook
 export function useLocalStorage<T>(key: string, initialValue: T) {

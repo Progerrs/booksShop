@@ -4,10 +4,8 @@ import { Layout } from "antd";
 import { ReactComponent as Logo } from "./logo.svg";
 import styles from "./styles.module.scss";
 
-// FIXME: Улучшить реализацию
-const STICKY_LIMIT = 1080 - 170; // Screen - Header - Magic Offse ;D
+const STICKY_LIMIT = 1080 - 170;
 
-// FIXME: Улучшить реализацию (ref/event?)
 const useSticky = () => {
     const [isSticky, setSticky] = useState(true);
     const handleScroll = () => {
@@ -47,20 +45,8 @@ const StickyHeader = (props: Props) => {
         >
             <div className={styles.logo}>
                 <Logo width={24} />
-                <h1 className={styles.logoTitle}>sharead</h1>
+                <h1 className={styles.logoTitle}>MarketRead</h1>
             </div>
-            {/* FIXME: Возможно, стоит вернуть на homePage */}
-            {/* <nav className={styles.nav}>
-                <a className={styles.navItem} href="#benefits">
-                    Польза
-                </a>
-                <a className={styles.navItem} href="#features">
-                    Возможности
-                </a>
-                <a className={styles.navItem} href="#social">
-                    Поиск единомышленников
-                </a>
-            </nav> */}
         </Layout.Header>
     );
 };

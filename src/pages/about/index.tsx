@@ -9,7 +9,7 @@ import styles from "./styles.module.scss";
 
 // eslint-disable-next-line max-lines-per-function
 const AboutPage = () => {
-    useTitle("О нас — Sharead");
+    useTitle("О нас — MarketRead");
 
     return (
         <Layout>
@@ -49,7 +49,7 @@ const BenefitsSection = () => (
         </p>
         <p>
             С другой стороны - букшеринг позволяет, не тратить большие деньги, на ознакомление с
-            интересующими книгами. <b>Sharead</b> - поможет вам получить нужные книги, только на
+            интересующими книгами. <b>MarketRead</b> - поможет вам получить нужные книги, только на
             нужное вам время и без переплат!
         </p>
     </Section>
